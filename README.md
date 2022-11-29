@@ -10,11 +10,7 @@ Chrome浏览器在85版本发布了标签页分组功能，但是需要手动对
 
 # 任务列表
 
-```[tasklist]
-### Tasks
-- [ ] https://github.com/octo-org/octo-repo/issues/45
-- [ ] Draft issue title
-```
+兼容 The Great Suspender Original 插件
 
 # 自行构建程序
 
