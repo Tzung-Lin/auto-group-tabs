@@ -51,8 +51,6 @@ const secDomainStrategy = {
       .then((allTabs) => {
         tabs = allTabs.filter((t) => t.url && domain === getSecDomain(t.url));
       });
-    console.log('querySameTabs:');
-    console.log(tabs);
     return tabs;
   },
 };
