@@ -51,6 +51,8 @@ const secDomainStrategy = {
       .then((allTabs) => {
         tabs = allTabs.filter((t) => t.url && domain === getSecDomain(t.url));
       });
+    console.log('querySameTabs:');
+    console.log(tabs);
     return tabs;
   },
 };
@@ -243,6 +245,10 @@ function getDomain(url) {
 }
 
 function getSecDomain(url) {
+  //检查url是否符合被插件挂起
+  if(url.startsWith('chrome-extension://ahmkjjgdligadogjedmnogbpbcpofeeo')){
+    url=url.split('&uri=')[1];
+  }
   const domain = getDomain(url);
   if (!domain) return null;
   // localhost地址或IP
